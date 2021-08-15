@@ -1,5 +1,6 @@
 
 import './App.css';
+import OanTuTi from './bt-oan-tu-ti/OanTuTi';
 import PickCar from './bt-react-car/PickCar';
 import ChangeGlasses from './bt-react-glasses/ChangeGlasses';
 
@@ -10,8 +11,10 @@ function App() {
         {/* <ChangeGlasses /> */}
 
         {/* Bài tập đổi xe */}
-        <PickCar />
+        {/* <PickCar /> */}
 
+        {/* Bài Tập oẳn tù tì */}
+        <OanTuTi />
     </div>
   );
 }

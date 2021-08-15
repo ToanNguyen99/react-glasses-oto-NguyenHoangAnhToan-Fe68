@@ -3,7 +3,9 @@ const initialState = {
     player: '',
     computer: '',
     soBanThang: 0,
+    soBanHoa: 0,
     soBanChoi: 0,
+    soBanThua: 0,
     mangOanTuTi: [{
             name: "bua",
             hinhAnh: "./images/game-oantuti/keo.png"
@@ -41,6 +43,14 @@ const gameOanTuTiReducer = (state = initialState, { type, payload }) => {
             // tinh so ban thang
             if ((state.player === 'keo' && state.computer === 'bao') || (state.player === 'bua' && state.computer === 'keo') || (state.player === 'bao' && state.computer === 'bua')) {
                 state.soBanThang += 1;
+            }
+            // tinh so lan Hoa
+            if ((state.player === 'keo' && state.computer === 'keo') || (state.player === 'bua' && state.computer === 'bua') || (state.player === 'bao' && state.computer === 'bao')) {
+                state.soBanHoa += 1;
+            }
+            // tinh so ban thua
+            if ((state.player === 'keo' && state.computer === 'bua') || (state.player === 'bua' && state.computer === 'bao') || (state.player === 'bao' && state.computer === 'keo')) {
+                state.soBanThua += 1;
             }
             return {...state };
         default:
